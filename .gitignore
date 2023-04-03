@@ -1,15 +1,15 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+//pass_fail сообщает, сдал ли пользователь экзамен.
+package main
 
-# Test binary, built with `go test -c`
-*.test
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
+func main() {
+	fmt.Print("Enter a grade: ")
+	reader := bufio.NewReader(os.Stdin)
+	input, _ := reader.ReadString('\n')
+	fmt.Println(input)
+}
